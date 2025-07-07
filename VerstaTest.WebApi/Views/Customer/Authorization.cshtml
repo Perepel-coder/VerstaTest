@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Авторизация";
+}
+<div id="authorization" class="authorization">
+    <div id="okno" class="okno container p-3 my-3 bg-dark text-white" style="height:300px">
+        <h3>Пожалуйста войдите в систему</h3>
+        <section id="newEntry" class="col flex-column">
+            <h>Логин</h>
+            <input class="row-cols-1" type="text" id="login">
+            <h>Пароль</h>
+            <input class="row-cols-1" type="password" id="password">
+            <section class="row" id="newEntry_button">
+                <button 
+                class="col btn btn-secondary btn-block" 
+                style="margin-right:2px"
+                        onclick='Input("/customer/authorization/check-customer/", "Неверный логин или пароль")'>
+                    Войти
+                </button>
+                <button 
+                class="col btn btn-outline-secondary btn-block" 
+                style="margin-left:2px"
+                        onclick='Input("/customer/authorization/create-customer/", "Пользователь с таким именем уже существует")'>
+                    Регистрация
+                </button>
+            </section>
+        </section>
+    </div>
+</div>
+<script src="~/js/authorization.js"></script>

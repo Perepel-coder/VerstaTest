@@ -1,0 +1,104 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/*#region ModelWindow*/
+.zatemnenie {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.okno {
+    width: 40%;
+    height: 500px;
+    text-align: center;
+    padding: 15px;
+    border: 3px solid var(--text-color);
+    border-radius: 10px;
+    color: var(--text-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: var(--main-color);
+}
+
+.zatemnenie:target {
+    display: block;
+}
+/*#endregion*/
+
+.authorization {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+
+#newEntry {
+    display: flex;
+}
+#newEntry h {
+    text-align:left;
+}
+#newEntry_button{
+    margin-left:0.5px;
+    margin-right:0.5px;
+    margin-top:10px;
+}
+
+#newEntry_r {
+    display: flex;
+}
+#newEntry_r h {
+    text-align:left;
+}
+#newEntry_button_r{
+    margin-left:0.5px;
+    margin-right:0.5px;
+    margin-top:10px;
+}
+
+.flexcolumn {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-width: 0%;
+    min-height: 0%;
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    min-width: 0%;
+    min-height: 0%;
+}

@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Главная страница";
+}
+
+<div id="zatemnenie" class="zatemnenie">
+    <div id="okno" class="okno container p-3 my-3 bg-dark text-white">
+        <h3>Заказ</h3>
+        <section id="newEntry" class="col flex-column">
+            <h id="num_h">Номер заказа</h>
+            <input class="row-cols-1" type="text" id="num" readonly>
+            <h>Город отправителя</h>
+            <input class="row-cols-1" type="text" id="sender_city">
+            <h>Адрес отправителя</h>
+            <input class="row-cols-1" type="text" id="sender_address">
+            <h>Город получателя</h>
+            <input class="row-cols-1" type="text" id="recipient_city"> 
+            <h>Адрес получателя</h>
+            <input class="row-cols-1" type="text" id="recipient_address">
+            <h>Вес груза</h>
+            <input class="row-cols-1" type="number" id="weight">
+            <h>Дата получения груза</h>
+            <input type="date" id="date_cargo"> 
+            <section class="row" id="newEntry_button">
+                <button 
+                id="addBtn"
+                class="col btn btn-secondary btn-block" 
+                style="margin-right:2px"
+                onclick="CreatNewOrder()">Добавить заказ</button>
+                <button 
+                id="cancelBtn"
+                class="col btn btn-secondary btn-block" 
+                style="margin-left:2px" 
+                onclick="location.href='#'" >Отмена</button>
+            </section>
+        </section>
+    </div>
+</div>
+
+<div class="container p-3 my-3 bg-dark text-white">
+    <header><h1>Список заказов</h1></header>
+    <section class="d-flex flex-row d-grid gap-3">
+        <div class="justify-content-center" id="list_orders_div">
+            <table class="table table-striped table-hover table-dark" id="list_orders_table">
+                <thead>
+                    <tr>
+                        <th>Номер</th>
+                        <th>Город отправителя</th>
+                        <th>Адрес отправителя</th>
+                        <th>Город получателя</th>
+                        <th>Адрес получателя</th>
+                        <th>Вес груза</th>
+                        <th>Дата получения груза</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="justify-content-center">
+            <button 
+            onclick="OpenOrderForm()" 
+            class="btn btn-secondary btn-block">Добавить новый заказ</button>
+        </div>
+    </section>
+</div>
+<script src="~/js/index.js"></script>
